@@ -38,8 +38,10 @@ header {
 
     & .header__badge-container {
         display: flex;
+        flex-direction: row;
         gap: 6px;
         text-align: center;
+        flex-wrap: wrap;
     }
 
     & .badge {
@@ -55,7 +57,12 @@ header {
         -webkit-line-clamp: 1;
         line-clamp: 1;
         overflow: hidden;
+        transition: 0.3s;
     }
+     & .badge:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        transform: scale(1.2);
+     }
 }
 
 .header__colum--right {
